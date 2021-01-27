@@ -17,6 +17,7 @@
 		3A0F47E725C11C1300A7A1A8 /* ShoeStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F47E625C11C1300A7A1A8 /* ShoeStoreUITests.swift */; };
 		3A0F47F925C142C900A7A1A8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F47F825C142C900A7A1A8 /* DetailViewController.swift */; };
 		3A0F480125C142DC00A7A1A8 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F480025C142DC00A7A1A8 /* CartViewController.swift */; };
+		3A0F480C25C1433E00A7A1A8 /* Shoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F480B25C1433E00A7A1A8 /* Shoes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		3A0F47E825C11C1300A7A1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A0F47F825C142C900A7A1A8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3A0F480025C142DC00A7A1A8 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		3A0F480B25C1433E00A7A1A8 /* Shoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		3A0F480825C142E200A7A1A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3A0F480B25C1433E00A7A1A8 /* Shoes.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A0F480C25C1433E00A7A1A8 /* Shoes.swift in Sources */,
 				3A0F47C925C11C1200A7A1A8 /* ShoeCategoryViewController.swift in Sources */,
 				3A0F47C525C11C1200A7A1A8 /* AppDelegate.swift in Sources */,
 				3A0F480125C142DC00A7A1A8 /* CartViewController.swift in Sources */,
