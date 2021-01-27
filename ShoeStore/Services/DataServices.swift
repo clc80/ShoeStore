@@ -11,10 +11,10 @@ class DataService {
     static let instance = DataService()
     
     private let categories = [
-        Category(title: "BOOTS"),
-        Category(title: "ACTIVE"),
-        Category(title: "FORMAL"),
-        Category(title: "SANDALS"),
+        Category(title: "BOOTS", imageName: "Boots"),
+        Category(title: "ACTIVE", imageName: "Active"),
+        Category(title: "FORMAL", imageName: "Formal"),
+        Category(title: "SANDALS", imageName: "Sandals"),
     ]
     
     private let boots = [
