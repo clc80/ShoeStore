@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ShoeCategoryViewController" customModule="ShoeStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CeF-KT-3Mt">
-                                <rect key="frame" x="0.0" y="141" width="414" height="721"/>
+                                <rect key="frame" x="0.0" y="53" width="414" height="721"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Cx6-0Y-HFZ">
                                     <size key="itemSize" width="371" height="222"/>
@@ -27,7 +27,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Categories" id="blt-oJ-nRd" customClass="CategoryCollectionViewCell" customModule="ShoeStore" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="blt-oJ-nRd" customClass="CategoryCollectionViewCell" customModule="ShoeStore" customModuleProvider="target">
                                         <rect key="frame" x="21.5" y="0.0" width="371" height="222"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2dE-o2-whX">
@@ -36,13 +36,19 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boots" translatesAutoresizingMaskIntoConstraints="NO" id="7OI-hS-0Vv">
                                                     <rect key="frame" x="0.0" y="0.0" width="371" height="222"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="7OI-hS-0Vv" secondAttribute="height" multiplier="371:222" id="Vbj-JC-AbU"/>
+                                                        <constraint firstAttribute="height" constant="200" id="lx5-P1-szS"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOOTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxe-7t-41r">
-                                                    <rect key="frame" x="125" y="87" width="121.5" height="48"/>
-                                                    <color key="backgroundColor" red="0.22523397842639592" green="0.22523397842639592" blue="0.22523397842639592" alpha="0.41925299657534248" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <rect key="frame" x="124" y="86" width="123.5" height="50"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="35"/>
-                                                    <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.35569153108934015" green="0.3360112187712857" blue="0.31502446820334379" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" red="0.72511967195228422" green="0.68499900456309715" blue="0.64221500675307297" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <size key="shadowOffset" width="2" height="2"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -63,7 +69,7 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUG-QW-PlE">
-                                <rect key="frame" x="0.0" y="93" width="414" height="43"/>
+                                <rect key="frame" x="0.0" y="5" width="404" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="lJF-tO-j8w"/>
                                 </constraints>
@@ -76,7 +82,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="CeF-KT-3Mt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="46q-l4-5Lu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KUG-QW-PlE" secondAttribute="trailing" id="CSU-EW-MeP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KUG-QW-PlE" secondAttribute="trailing" constant="10" id="CSU-EW-MeP"/>
                             <constraint firstItem="CeF-KT-3Mt" firstAttribute="top" secondItem="KUG-QW-PlE" secondAttribute="bottom" constant="5" id="K3m-Ob-c54"/>
                             <constraint firstItem="KUG-QW-PlE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="KXb-FP-b9P"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CeF-KT-3Mt" secondAttribute="bottom" id="Ytt-OA-6ta"/>
@@ -85,10 +91,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Shoe Store" id="Q6z-si-9iv"/>
+                    <connections>
+                        <outlet property="shoeCategoryView" destination="CeF-KT-3Mt" id="Cum-qr-g2v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="479.71014492753625" y="87.723214285714278"/>
+            <point key="canvasLocation" x="264" y="65"/>
         </scene>
         <!--Shoe Type View Controller-->
         <scene sceneID="WLH-zN-vlg">
@@ -140,9 +149,11 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Rn-CM-4Zo" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="6pk-Bo-12B">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" largeTitles="YES" id="6pk-Bo-12B">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.82352941176470584" green="0.77254901960784317" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.82352941180000006" green="0.7725490196" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -151,7 +162,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWH-Vm-ZXa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-197.10144927536234" y="81.696428571428569"/>
+            <point key="canvasLocation" x="-446" y="65"/>
         </scene>
     </scenes>
     <resources>
