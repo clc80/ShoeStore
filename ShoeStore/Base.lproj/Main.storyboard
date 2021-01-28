@@ -118,7 +118,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mis-E1-OAR">
-                                <rect key="frame" x="0.0" y="97" width="414" height="765"/>
+                                <rect key="frame" x="0.0" y="97" width="414" height="716"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8xy-D4-Aml">
                                     <size key="itemSize" width="189" height="204"/>
@@ -204,12 +204,13 @@
                             <constraint firstItem="mis-E1-OAR" firstAttribute="top" secondItem="37R-TE-ZS5" secondAttribute="bottom" constant="5" id="ym4-ci-E6U"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="yfz-W0-zaI">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart" catalog="system" width="5" id="fUH-lT-ZdV">
-                            <color key="tintColor" red="0.20042829949999999" green="0.1893386581" blue="0.177512853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="iMK-JT-nTo"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="yfz-W0-zaI"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="shoeCategoryLabel" destination="37R-TE-ZS5" id="r2F-fC-Ijr"/>
                         <outlet property="shoesCollectionView" destination="mis-E1-OAR" id="S98-wb-S9E"/>
                     </connections>
                 </viewController>
@@ -230,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e0Z-xv-c2W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1835" y="88"/>
+            <point key="canvasLocation" x="1830" y="382"/>
         </scene>
         <!--Cart View Controller-->
         <scene sceneID="kpS-d2-fdA">
@@ -245,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="noO-3r-v0p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2533" y="88"/>
+            <point key="canvasLocation" x="1830" y="-281"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fff-n1-NRY">
@@ -271,7 +272,6 @@
     <resources>
         <image name="Sherbourne" width="620" height="620"/>
         <image name="boots" width="3500" height="2333"/>
-        <image name="cart" catalog="system" width="128" height="102"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

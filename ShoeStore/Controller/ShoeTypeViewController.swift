@@ -9,6 +9,7 @@ import UIKit
 
 class ShoeTypeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    @IBOutlet var shoeCategoryLabel: UILabel!
     @IBOutlet var shoesCollectionView: UICollectionView!
     
     var shoes = [Shoe]()
@@ -17,6 +18,9 @@ class ShoeTypeViewController: UIViewController, UICollectionViewDelegate, UIColl
         super.viewDidLoad()
         shoesCollectionView.dataSource = self
         shoesCollectionView.delegate = self
+        
+        // Add cart button
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "cart"), style: .plain, target: nil, action: nil)
     }
     
     func initShoes(category: Category) {
@@ -49,21 +53,21 @@ class ShoeTypeViewController: UIViewController, UICollectionViewDelegate, UIColl
             return ShoesCollectionViewCell()
         }
     }
+    @objc func openCart() {
+        
+    }
     
     @objc func addToCartButtonPressed(sender: UIButton) {
-        var shoePicked = shoes[sender.tag]
+        let shoePicked = shoes[sender.tag]
         
         if shoePicked.added == true {
             shoes[sender.tag].added = false
-            //shoePicked.added = false
             DataService.instance.changeItemQuantity(shoe: shoePicked, quantity: 0)
         } else {
             shoes[sender.tag].added = true
-            //shoePicked.added = true
             DataService.instance.addItemToCart(shoe: shoePicked)
         }
         self.shoesCollectionView.reloadData()
-        print(DataService.instance.getCartItems())
     }
 }
 

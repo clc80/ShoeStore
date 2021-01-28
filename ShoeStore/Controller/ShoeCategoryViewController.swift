@@ -42,9 +42,11 @@ class ShoeCategoryViewController: UIViewController, UICollectionViewDelegate, UI
         let category = DataService.instance.getCategories()[indexPath.row]
         let shoeVC = storyboard?.instantiateViewController(withIdentifier: "ShoeTypeViewController") as? ShoeTypeViewController
         shoeVC?.initShoes(category: category)
+        
         let barButton = UIBarButtonItem()
         barButton.title = ""
         navigationItem.backBarButtonItem = barButton
+        
         self.navigationController?.pushViewController(shoeVC!, animated: true)
     }
 }
