@@ -69,7 +69,7 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUG-QW-PlE">
-                                <rect key="frame" x="0.0" y="5" width="404" height="43"/>
+                                <rect key="frame" x="10" y="5" width="394" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="lJF-tO-j8w"/>
                                 </constraints>
@@ -86,7 +86,7 @@
                             <constraint firstItem="CeF-KT-3Mt" firstAttribute="top" secondItem="KUG-QW-PlE" secondAttribute="bottom" constant="5" id="K3m-Ob-c54"/>
                             <constraint firstItem="KUG-QW-PlE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="KXb-FP-b9P"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CeF-KT-3Mt" secondAttribute="bottom" id="Ytt-OA-6ta"/>
-                            <constraint firstItem="KUG-QW-PlE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gaP-Zr-Mje"/>
+                            <constraint firstItem="KUG-QW-PlE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="gaP-Zr-Mje"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CeF-KT-3Mt" secondAttribute="trailing" id="qg0-5H-p8w"/>
                         </constraints>
                     </view>
@@ -102,17 +102,122 @@
         <!--Shoe Type View Controller-->
         <scene sceneID="WLH-zN-vlg">
             <objects>
-                <viewController id="OIc-kn-Cyz" customClass="ShoeTypeViewController" customModule="ShoeStore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShoeTypeViewController" id="OIc-kn-Cyz" customClass="ShoeTypeViewController" customModule="ShoeStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oVP-fB-zvn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shoes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37R-TE-ZS5">
+                                <rect key="frame" x="10" y="49" width="394" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="713-sc-fkH"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43" id="j0S-6G-2Vq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mis-E1-OAR">
+                                <rect key="frame" x="0.0" y="97" width="414" height="765"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8xy-D4-Aml">
+                                    <size key="itemSize" width="189" height="204"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShoeCell" id="d5I-7f-heJ" customClass="ShoesCollectionViewCell" customModule="ShoeStore" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="189" height="204"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="z9q-GC-Z4l">
+                                            <rect key="frame" x="0.0" y="0.0" width="189" height="204"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sherbourne" translatesAutoresizingMaskIntoConstraints="NO" id="aET-5Z-uOp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="189" height="130"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="130" id="XZL-u6-bWj"/>
+                                                        <constraint firstAttribute="width" constant="189" id="l8e-OQ-ukI"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$199" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ErS-Xz-3JV">
+                                                    <rect key="frame" x="10" y="133" width="179" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="5ps-78-d11"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                                    <color key="textColor" red="0.72511967200000005" green="0.68499900459999996" blue="0.64221500679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sherbourne Boots" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFA-yn-Gyc">
+                                                    <rect key="frame" x="10" y="161" width="179" height="43"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                                    <color key="textColor" red="0.35569153110000001" green="0.33601121880000001" blue="0.31502446820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pim-n1-7Uo">
+                                                    <rect key="frame" x="150" y="15" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="5o4-Kx-5zT"/>
+                                                        <constraint firstAttribute="width" constant="24" id="Tqz-G5-HOC"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <state key="normal" image="heart" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="AddToCartButton:" destination="d5I-7f-heJ" eventType="touchUpInside" id="1KN-Lk-0QS"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="IFA-yn-Gyc" firstAttribute="leading" secondItem="z9q-GC-Z4l" secondAttribute="leading" constant="10" id="7lo-WP-6eA"/>
+                                                <constraint firstItem="aET-5Z-uOp" firstAttribute="top" secondItem="z9q-GC-Z4l" secondAttribute="top" id="87T-gQ-BHM"/>
+                                                <constraint firstAttribute="bottom" secondItem="IFA-yn-Gyc" secondAttribute="bottom" id="APZ-Hg-kdZ"/>
+                                                <constraint firstItem="pim-n1-7Uo" firstAttribute="top" secondItem="z9q-GC-Z4l" secondAttribute="top" constant="15" id="DoY-gx-imj"/>
+                                                <constraint firstAttribute="trailing" secondItem="ErS-Xz-3JV" secondAttribute="trailing" id="NHh-4W-ECu"/>
+                                                <constraint firstAttribute="trailing" secondItem="aET-5Z-uOp" secondAttribute="trailing" id="bSw-bU-Fc7"/>
+                                                <constraint firstItem="ErS-Xz-3JV" firstAttribute="leading" secondItem="z9q-GC-Z4l" secondAttribute="leading" constant="10" id="bbF-BR-1in"/>
+                                                <constraint firstItem="ErS-Xz-3JV" firstAttribute="top" secondItem="aET-5Z-uOp" secondAttribute="bottom" constant="3" id="gaO-PZ-cRn"/>
+                                                <constraint firstItem="IFA-yn-Gyc" firstAttribute="top" secondItem="ErS-Xz-3JV" secondAttribute="bottom" constant="3" id="jdS-UW-dsl"/>
+                                                <constraint firstAttribute="trailing" secondItem="pim-n1-7Uo" secondAttribute="trailing" constant="15" id="lEf-h7-7aG"/>
+                                                <constraint firstAttribute="trailing" secondItem="IFA-yn-Gyc" secondAttribute="trailing" id="mp4-1w-2y4"/>
+                                                <constraint firstItem="aET-5Z-uOp" firstAttribute="leading" secondItem="z9q-GC-Z4l" secondAttribute="leading" id="oRA-XR-cq6"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="189" height="204"/>
+                                        <connections>
+                                            <outlet property="shoeImage" destination="aET-5Z-uOp" id="cLY-Sx-KSl"/>
+                                            <outlet property="shoeName" destination="IFA-yn-Gyc" id="CXZ-cu-1Qy"/>
+                                            <outlet property="shoePrice" destination="ErS-Xz-3JV" id="mb8-Mh-fYU"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="D2v-AN-aCd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="37R-TE-ZS5" firstAttribute="leading" secondItem="D2v-AN-aCd" secondAttribute="leading" constant="10" id="1Uv-7L-Sld"/>
+                            <constraint firstItem="D2v-AN-aCd" firstAttribute="trailing" secondItem="37R-TE-ZS5" secondAttribute="trailing" constant="10" id="2Ff-0S-43D"/>
+                            <constraint firstItem="D2v-AN-aCd" firstAttribute="trailing" secondItem="mis-E1-OAR" secondAttribute="trailing" id="3Ne-EE-7Sb"/>
+                            <constraint firstItem="37R-TE-ZS5" firstAttribute="top" secondItem="D2v-AN-aCd" secondAttribute="top" constant="5" id="6h0-Mt-Bk6"/>
+                            <constraint firstItem="mis-E1-OAR" firstAttribute="leading" secondItem="D2v-AN-aCd" secondAttribute="leading" id="RhR-B9-xGK"/>
+                            <constraint firstItem="D2v-AN-aCd" firstAttribute="bottom" secondItem="mis-E1-OAR" secondAttribute="bottom" id="ha5-j3-Vhh"/>
+                            <constraint firstItem="mis-E1-OAR" firstAttribute="top" secondItem="37R-TE-ZS5" secondAttribute="bottom" constant="5" id="ym4-ci-E6U"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="yfz-W0-zaI">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart" catalog="system" width="5" id="fUH-lT-ZdV">
+                            <color key="tintColor" red="0.20042829949999999" green="0.1893386581" blue="0.177512853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="shoesCollectionView" destination="mis-E1-OAR" id="S98-wb-S9E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zwf-7Y-kih" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1175" y="88"/>
+            <point key="canvasLocation" x="1031.8840579710145" y="64.955357142857139"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="ssS-y6-Hiz">
@@ -166,7 +271,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Sherbourne" width="620" height="620"/>
         <image name="boots" width="3500" height="2333"/>
+        <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

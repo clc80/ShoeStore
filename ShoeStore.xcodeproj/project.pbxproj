@@ -22,6 +22,7 @@
 		3A0F481725C1448200A7A1A8 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F481625C1448200A7A1A8 /* DataServices.swift */; };
 		3A0F481F25C1496000A7A1A8 /* ShoeTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F481E25C1496000A7A1A8 /* ShoeTypeViewController.swift */; };
 		3A0F482425C14E0600A7A1A8 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F482325C14E0600A7A1A8 /* CategoryCollectionViewCell.swift */; };
+		3A0F482925C158CA00A7A1A8 /* ShoesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F482825C158CA00A7A1A8 /* ShoesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		3A0F481625C1448200A7A1A8 /* DataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
 		3A0F481E25C1496000A7A1A8 /* ShoeTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeTypeViewController.swift; sourceTree = "<group>"; };
 		3A0F482325C14E0600A7A1A8 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		3A0F482825C158CA00A7A1A8 /* ShoesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				3A0F482325C14E0600A7A1A8 /* CategoryCollectionViewCell.swift */,
+				3A0F482825C158CA00A7A1A8 /* ShoesCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				3A0F482425C14E0600A7A1A8 /* CategoryCollectionViewCell.swift in Sources */,
 				3A0F480125C142DC00A7A1A8 /* CartViewController.swift in Sources */,
 				3A0F47C725C11C1200A7A1A8 /* SceneDelegate.swift in Sources */,
+				3A0F482925C158CA00A7A1A8 /* ShoesCollectionViewCell.swift in Sources */,
 				3A0F47F925C142C900A7A1A8 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
