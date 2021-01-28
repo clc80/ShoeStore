@@ -68,11 +68,11 @@ class ShoeTypeViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     @objc func addToCartButtonPressed(sender: UIButton) {
-        let shoePicked = shoes[sender.tag]
+        var shoePicked = shoes[sender.tag]
         
         if shoePicked.added == true {
             shoes[sender.tag].added = false
-            DataService.instance.changeItemQuantity(shoe: shoePicked, quantity: 0)
+            DataService.instance.changeItemQuantity(shoe: &shoePicked, quantity: 0)
         } else {
             shoes[sender.tag].added = true
             DataService.instance.addItemToCart(shoe: shoePicked)

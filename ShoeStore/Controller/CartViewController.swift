@@ -24,7 +24,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         shoesInCart = DataService.instance.getCartItems()
         shoeArray = Array(shoesInCart.keys)
-        
+
         getTotal()
         TotalLabel.text = "Total: $\(total)"
     }
@@ -39,16 +39,52 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             let quantity = shoesInCart[shoe]
             
             cell.updateViews(shoe: shoe, quantity: quantity!)
+            
+            cell.minusButton.tag = indexPath.row
+            cell.minusButton.addTarget(self, action: #selector(self.subtractOne(sender:)), for: .touchUpInside)
+            cell.plusButton.tag = indexPath.row
+            cell.plusButton.addTarget(self, action: #selector(self.addOne(sender:)), for: .touchUpInside)
+            
             return cell
         } else {
             return ShoppingCartTableViewCell()
         }
     }
     
+    func initCart() {
+        shoeArray = Array(shoesInCart.keys)
+        
+        getTotal()
+        TotalLabel.text = "Total: $\(total)"
+    }
+    
     func getTotal() {
-        for (key, _) in shoesInCart {
-            total += key.price
+        total = 0
+        for (key, value) in shoesInCart {
+            total += key.price * value
         }
+    }
+    
+    @objc func subtractOne(sender: UIButton) {
+        print("subtract button pressed")
+        var shoePicked = shoeArray[sender.tag]
+        let quantity = shoesInCart[shoePicked]! - 1
+        
+        DataService.instance.changeItemQuantity(shoe: &shoePicked, quantity: quantity)
+        shoesInCart = DataService.instance.getCartItems()
+        initCart()
+        self.cartTableView.reloadData()
+    }
+    
+    @objc func addOne(sender: UIButton) {
+        print("add button pressed")
+        var shoePicked = shoeArray[sender.tag]
+        let quantity = shoesInCart[shoePicked]! + 1
+        
+        DataService.instance.changeItemQuantity(shoe: &shoePicked, quantity: quantity)
+        shoesInCart = DataService.instance.getCartItems()
+        initCart()
+        self.cartTableView.reloadData()
     }
 
 }
