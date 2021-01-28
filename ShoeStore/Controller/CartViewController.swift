@@ -14,6 +14,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var shoesInCart = [Shoe: Int]()
     var shoeArray  = [Shoe]()
+    var total = 0
     
     
     override func viewDidLoad() {
@@ -23,7 +24,9 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         shoesInCart = DataService.instance.getCartItems()
         shoeArray = Array(shoesInCart.keys)
-        // navigationItem.title = category.title
+        
+        getTotal()
+        TotalLabel.text = "Total: $\(total)"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,6 +42,12 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             return cell
         } else {
             return ShoppingCartTableViewCell()
+        }
+    }
+    
+    func getTotal() {
+        for (key, _) in shoesInCart {
+            total += key.price
         }
     }
 
