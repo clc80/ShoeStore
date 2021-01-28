@@ -219,17 +219,89 @@
         <!--Detail View Controller-->
         <scene sceneID="ssS-y6-Hiz">
             <objects>
-                <viewController id="RTo-Yq-eT0" customClass="DetailViewController" customModule="ShoeStore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="RTo-Yq-eT0" customClass="DetailViewController" customModule="ShoeStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rX3-L5-VjF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXb-8E-8RG">
+                                <rect key="frame" x="57" y="64" width="65" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="xpr-2g-iIJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                <color key="textColor" red="0.35569153110000001" green="0.33601121880000001" blue="0.31502446820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9i-RY-Cxt">
+                                <rect key="frame" x="57" y="327" width="38" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="RIY-1A-7j9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.35569153110000001" green="0.33601121880000001" blue="0.31502446820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flare" translatesAutoresizingMaskIntoConstraints="NO" id="pbv-ee-xrG">
+                                <rect key="frame" x="57" y="117" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="9bA-1o-F92"/>
+                                    <constraint firstAttribute="width" constant="300" id="Md8-Tc-xcp"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtX-WJ-jwy">
+                                <rect key="frame" x="166" y="802" width="82" height="40"/>
+                                <color key="backgroundColor" red="0.72511967200000005" green="0.68499900459999996" blue="0.64221500679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Phc-1i-4rM"/>
+                                </constraints>
+                                <state key="normal" title="Add To Cart">
+                                    <color key="titleColor" red="0.35569153110000001" green="0.33601121880000001" blue="0.31502446820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="AddToCartButtonPressed:" destination="RTo-Yq-eT0" eventType="touchUpInside" id="TLt-0x-079"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3Ao-Pr-3wR">
+                                <rect key="frame" x="57" y="361" width="300" height="208"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="208" id="uHn-2h-Fzs"/>
+                                    <constraint firstAttribute="width" constant="300" id="wTP-aM-abR"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis n</string>
+                                <color key="textColor" red="0.20042829949999999" green="0.1893386581" blue="0.177512853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="bN4-4b-yKs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pbv-ee-xrG" firstAttribute="top" secondItem="LXb-8E-8RG" secondAttribute="bottom" constant="20" id="0FQ-b2-RzH"/>
+                            <constraint firstItem="pbv-ee-xrG" firstAttribute="centerX" secondItem="rX3-L5-VjF" secondAttribute="centerX" id="Bi0-Jj-vJk"/>
+                            <constraint firstItem="LXb-8E-8RG" firstAttribute="top" secondItem="bN4-4b-yKs" secondAttribute="top" constant="20" id="CEK-4i-ufT"/>
+                            <constraint firstItem="n9i-RY-Cxt" firstAttribute="top" secondItem="pbv-ee-xrG" secondAttribute="bottom" constant="10" id="FIY-EM-ZCR"/>
+                            <constraint firstItem="BtX-WJ-jwy" firstAttribute="centerX" secondItem="rX3-L5-VjF" secondAttribute="centerX" id="HNr-9H-LH8"/>
+                            <constraint firstItem="bN4-4b-yKs" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="n9i-RY-Cxt" secondAttribute="trailing" symbolic="YES" id="JTt-cP-hVR"/>
+                            <constraint firstItem="n9i-RY-Cxt" firstAttribute="leading" secondItem="pbv-ee-xrG" secondAttribute="leading" id="U3j-P8-JHz"/>
+                            <constraint firstItem="bN4-4b-yKs" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LXb-8E-8RG" secondAttribute="trailing" symbolic="YES" id="Uz1-Gt-44l"/>
+                            <constraint firstItem="bN4-4b-yKs" firstAttribute="bottom" secondItem="BtX-WJ-jwy" secondAttribute="bottom" constant="20" id="XgK-w9-Seg"/>
+                            <constraint firstItem="LXb-8E-8RG" firstAttribute="leading" secondItem="pbv-ee-xrG" secondAttribute="leading" id="a7P-dq-9Jj"/>
+                            <constraint firstItem="3Ao-Pr-3wR" firstAttribute="leading" secondItem="n9i-RY-Cxt" secondAttribute="leading" id="jYe-rp-AM3"/>
+                            <constraint firstItem="3Ao-Pr-3wR" firstAttribute="top" secondItem="n9i-RY-Cxt" secondAttribute="bottom" constant="10" id="xRD-sm-cYw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="3Ao-Pr-3wR" id="Sh5-wi-hK8"/>
+                        <outlet property="imageView" destination="pbv-ee-xrG" id="BCu-KF-ktf"/>
+                        <outlet property="nameLabel" destination="LXb-8E-8RG" id="S8g-Zj-1L7"/>
+                        <outlet property="priceLabel" destination="n9i-RY-Cxt" id="gY3-or-U1u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e0Z-xv-c2W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1830" y="382"/>
+            <point key="canvasLocation" x="1828.985507246377" y="381.69642857142856"/>
         </scene>
         <!--Cart View Controller-->
         <scene sceneID="kpS-d2-fdA">
@@ -450,6 +522,7 @@
     <resources>
         <image name="Boots" width="3500" height="2333"/>
         <image name="Darcy" width="620" height="620"/>
+        <image name="Flare" width="620" height="620"/>
         <image name="Sherbourne" width="620" height="620"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="minus" catalog="system" width="128" height="24"/>

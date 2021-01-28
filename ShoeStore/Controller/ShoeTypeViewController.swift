@@ -54,6 +54,14 @@ class ShoeTypeViewController: UIViewController, UICollectionViewDelegate, UIColl
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let shoe = shoes[indexPath.row]
+        let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController
+        detailVC?.shoe = shoe
+        
+        self.navigationController?.pushViewController(detailVC!, animated: true)
+    }
+    
     @objc func openCart() {
         print("Cart button pressed")
         let cartVC = storyboard?.instantiateViewController(withIdentifier: "CartViewController") as? CartViewController
