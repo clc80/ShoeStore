@@ -57,7 +57,7 @@ class DataService {
     
     func changeItemQuantity(shoe: Shoe, quantity: Int) {
         if quantity <= 0 {
-            shoppingCartItems[shoe] = nil
+            shoppingCartItems.removeValue(forKey: shoe)
         } else {
             shoppingCartItems[shoe] = quantity
         }

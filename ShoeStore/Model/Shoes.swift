@@ -12,6 +12,7 @@ struct Shoe: Hashable {
     private(set) public var description: String
     private(set) public var price: Int
     private(set) public var imageName: String
+    public var added = false
     
     init(name: String, description: String, price: Int, imageName: String) {
         self.name = name

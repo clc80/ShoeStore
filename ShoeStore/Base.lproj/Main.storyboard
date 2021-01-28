@@ -164,9 +164,6 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <state key="normal" image="heart" catalog="system"/>
-                                                    <connections>
-                                                        <action selector="AddToCartButton:" destination="d5I-7f-heJ" eventType="touchUpInside" id="1KN-Lk-0QS"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -186,6 +183,7 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="189" height="204"/>
                                         <connections>
+                                            <outlet property="button" destination="pim-n1-7Uo" id="DjD-fs-gfL"/>
                                             <outlet property="shoeImage" destination="aET-5Z-uOp" id="cLY-Sx-KSl"/>
                                             <outlet property="shoeName" destination="IFA-yn-Gyc" id="CXZ-cu-1Qy"/>
                                             <outlet property="shoePrice" destination="ErS-Xz-3JV" id="mb8-Mh-fYU"/>
