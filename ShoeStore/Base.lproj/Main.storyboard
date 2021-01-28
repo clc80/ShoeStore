@@ -34,7 +34,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="371" height="222"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boots" translatesAutoresizingMaskIntoConstraints="NO" id="7OI-hS-0Vv">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boots" translatesAutoresizingMaskIntoConstraints="NO" id="7OI-hS-0Vv">
                                                     <rect key="frame" x="0.0" y="0.0" width="371" height="222"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="7OI-hS-0Vv" secondAttribute="height" multiplier="371:222" id="Vbj-JC-AbU"/>
@@ -355,19 +355,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIn-ZQ-LkK">
+                                <rect key="frame" x="10" y="846" width="217" height="40"/>
+                                <color key="backgroundColor" red="0.35569153110000001" green="0.33601121880000001" blue="0.31502446820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="k1r-Wy-Y6J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Purchase">
+                                    <color key="titleColor" red="0.82352941180000006" green="0.7725490196" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="GCZ-mw-heq" kind="show" id="C3f-kx-3IO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IYt-ta-r3c"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="vzE-ya-U4V" secondAttribute="bottom" constant="10" id="5kZ-Yi-Cdh"/>
                             <constraint firstItem="bca-27-Cy6" firstAttribute="leading" secondItem="IYt-ta-r3c" secondAttribute="leading" id="7PJ-GE-qdo"/>
+                            <constraint firstItem="vzE-ya-U4V" firstAttribute="leading" secondItem="SIn-ZQ-LkK" secondAttribute="trailing" constant="20" id="Aqu-03-kMe"/>
                             <constraint firstItem="R29-25-oY2" firstAttribute="top" secondItem="bca-27-Cy6" secondAttribute="bottom" constant="10" id="Hjl-0Q-wmT"/>
                             <constraint firstItem="R29-25-oY2" firstAttribute="leading" secondItem="IYt-ta-r3c" secondAttribute="leading" id="Ucq-Wq-jEg"/>
                             <constraint firstItem="IYt-ta-r3c" firstAttribute="trailing" secondItem="vzE-ya-U4V" secondAttribute="trailing" constant="10" id="UuS-Qv-h06"/>
                             <constraint firstItem="bca-27-Cy6" firstAttribute="trailing" secondItem="IYt-ta-r3c" secondAttribute="trailing" id="VV5-Yt-gAT"/>
                             <constraint firstItem="IYt-ta-r3c" firstAttribute="trailing" secondItem="R29-25-oY2" secondAttribute="trailing" id="Xgc-R1-OUi"/>
+                            <constraint firstAttribute="bottom" secondItem="SIn-ZQ-LkK" secondAttribute="bottom" constant="10" id="hLY-Pb-cnO"/>
                             <constraint firstItem="vzE-ya-U4V" firstAttribute="top" secondItem="R29-25-oY2" secondAttribute="bottom" constant="5" id="k0k-ee-h8c"/>
                             <constraint firstItem="bca-27-Cy6" firstAttribute="top" secondItem="IYt-ta-r3c" secondAttribute="top" constant="10" id="oOg-K7-CNX"/>
+                            <constraint firstItem="SIn-ZQ-LkK" firstAttribute="leading" secondItem="IYt-ta-r3c" secondAttribute="leading" constant="10" id="thG-2X-2ot"/>
                         </constraints>
                     </view>
                     <connections>
@@ -378,6 +395,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="noO-3r-v0p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1828.985507246377" y="-281.25"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ukG-2K-ZXO">
+            <objects>
+                <viewController id="GCZ-mw-heq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YCI-5E-d0E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank You For Your Purchase" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0B-yY-Dwk">
+                                <rect key="frame" x="10" y="366.5" width="394" height="109.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cpT-zH-qb7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="p0B-yY-Dwk" firstAttribute="centerX" secondItem="YCI-5E-d0E" secondAttribute="centerX" id="3aO-3D-SGb"/>
+                            <constraint firstItem="p0B-yY-Dwk" firstAttribute="leading" secondItem="YCI-5E-d0E" secondAttribute="leading" constant="10" id="OKa-T2-4Oz"/>
+                            <constraint firstItem="p0B-yY-Dwk" firstAttribute="centerY" secondItem="YCI-5E-d0E" secondAttribute="centerY" id="cqw-fh-jAA"/>
+                            <constraint firstAttribute="trailing" secondItem="p0B-yY-Dwk" secondAttribute="trailing" constant="10" id="iVt-K9-9xk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8aV-nk-8G1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3cS-Sf-ejw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2584" y="-1"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fff-n1-NRY">
@@ -401,9 +448,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Boots" width="3500" height="2333"/>
         <image name="Darcy" width="620" height="620"/>
         <image name="Sherbourne" width="620" height="620"/>
-        <image name="boots" width="3500" height="2333"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="minus" catalog="system" width="128" height="24"/>
         <image name="plus" catalog="system" width="128" height="113"/>

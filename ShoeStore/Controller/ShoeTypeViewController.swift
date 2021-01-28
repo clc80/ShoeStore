@@ -57,13 +57,6 @@ class ShoeTypeViewController: UIViewController, UICollectionViewDelegate, UIColl
     @objc func openCart() {
         print("Cart button pressed")
         let cartVC = storyboard?.instantiateViewController(withIdentifier: "CartViewController") as? CartViewController
-        //cartVC?.shoesInCart = DataService.instance.getCartItems()
-//        shoeVC?.initShoes(category: category)
-//        
-//        let barButton = UIBarButtonItem()
-//        barButton.title = ""
-//        navigationItem.backBarButtonItem = barButton
-        
         self.navigationController?.pushViewController(cartVC!, animated: true)
     }
     
