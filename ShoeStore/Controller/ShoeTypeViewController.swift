@@ -20,7 +20,7 @@ class ShoeTypeViewController: UIViewController, UICollectionViewDelegate, UIColl
         shoesCollectionView.delegate = self
         
         // Add cart button
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "cart"), style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "cart"), style: .plain, target: self, action: #selector(openCart))
     }
     
     func initShoes(category: Category) {
@@ -53,8 +53,17 @@ class ShoeTypeViewController: UIViewController, UICollectionViewDelegate, UIColl
             return ShoesCollectionViewCell()
         }
     }
+    
     @objc func openCart() {
+        print("Cart button pressed")
+        let cartVC = storyboard?.instantiateViewController(withIdentifier: "CartViewController") as? CartViewController
+//        shoeVC?.initShoes(category: category)
+//        
+//        let barButton = UIBarButtonItem()
+//        barButton.title = ""
+//        navigationItem.backBarButtonItem = barButton
         
+        self.navigationController?.pushViewController(cartVC!, animated: true)
     }
     
     @objc func addToCartButtonPressed(sender: UIButton) {
