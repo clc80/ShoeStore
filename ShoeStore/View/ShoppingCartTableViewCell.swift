@@ -25,11 +25,5 @@ class ShoppingCartTableViewCell: UITableViewCell {
         shoeQuantity.text = "\(quantity)"
         
     }
-    @IBAction func plusButtonPressed(_ sender: Any) {
-        
-    }
-    @IBAction func minusButtonPressed(_ sender: Any) {
-        
-    }
     
 }

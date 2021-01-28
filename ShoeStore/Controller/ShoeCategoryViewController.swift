@@ -13,7 +13,6 @@ class ShoeCategoryViewController: UIViewController, UICollectionViewDelegate, UI
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         shoeCategoryView.delegate = self
         shoeCategoryView.dataSource = self
     }

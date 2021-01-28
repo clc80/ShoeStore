@@ -363,9 +363,6 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <state key="normal" image="minus" catalog="system"/>
-                                                    <connections>
-                                                        <action selector="minusButtonPressed:" destination="Ew5-xk-KkS" eventType="touchUpInside" id="cem-Fm-XVC"/>
-                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nv-Cm-IK4">
                                                     <rect key="frame" x="267" y="81" width="30" height="30"/>
@@ -384,9 +381,6 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <state key="normal" image="plus" catalog="system"/>
-                                                    <connections>
-                                                        <action selector="plusButtonPressed:" destination="Ew5-xk-KkS" eventType="touchUpInside" id="rjc-JO-zvS"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>

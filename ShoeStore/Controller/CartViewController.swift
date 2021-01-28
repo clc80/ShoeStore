@@ -23,10 +23,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         cartTableView.dataSource = self
         
         shoesInCart = DataService.instance.getCartItems()
-        shoeArray = Array(shoesInCart.keys)
-
-        getTotal()
-        TotalLabel.text = "Total: $\(total)"
+        initCart()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,7 +38,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.updateViews(shoe: shoe, quantity: quantity!)
             
             cell.minusButton.tag = indexPath.row
-            cell.minusButton.addTarget(self, action: #selector(self.subtractOne(sender:)), for: .touchUpInside)
+            cell.minusButton.addTarget(self, action: #selector(self.addOrSubtract(sender: <#UIButton#>, mathToDo: "-")), for: .touchUpInside)
             cell.plusButton.tag = indexPath.row
             cell.plusButton.addTarget(self, action: #selector(self.addOne(sender:)), for: .touchUpInside)
             
@@ -65,8 +62,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    @objc func subtractOne(sender: UIButton) {
-        print("subtract button pressed")
+    @objc func addOrSubtract(sender: UIButton, mathToDo: String) {
         var shoePicked = shoeArray[sender.tag]
         let quantity = shoesInCart[shoePicked]! - 1
         
@@ -77,7 +73,6 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @objc func addOne(sender: UIButton) {
-        print("add button pressed")
         var shoePicked = shoeArray[sender.tag]
         let quantity = shoesInCart[shoePicked]! + 1
         
