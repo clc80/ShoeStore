@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Shoe {
+struct Shoe: Hashable {
     private(set) public var name: String
     private(set) public var description: String
     private(set) public var price: Int

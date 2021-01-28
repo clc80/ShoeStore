@@ -10,6 +10,8 @@ import Foundation
 class DataService {
     static let instance = DataService()
     
+    private var shoppingCartItems = [Shoe: Int]()
+    
     private let categories = [
         Category(title: "BOOTS", imageName: "Boots"),
         Category(title: "ACTIVE", imageName: "Active"),
@@ -40,6 +42,26 @@ class DataService {
         Shoe(name: "Travel Sandals ", description: "Cushioned, durable and fully-adjustable, what's not to love about Travel? Offering three padded touch-close Velvet Nubuck straps with additional side panels for enhanced support around your foot, you'll feel completely secure from the moment you take your first step. The cushioned and contoured microfibre footbed forms part of the Tri-Density Comfort Sole, along with a lightweight midsole and rugged tread to help tackle rough terrain with ease.", price: 135, imageName: "Travel"),
         Shoe(name: "Flare Sandals", description: "Stand out and get noticed in Flare, a multi-strap leather sandal that flatters the foot and offers excellent adjustability and comfort. Two touch-close straps open fully for ease of access and can be altered to ensure that they are perfectly positioned to offer the correct support. With a flexible, durable sole and soft, cushioned microfibre insole; feel confident in every step you take in Flare.", price: 135, imageName: "Flare")
     ]
+    
+    func addItemToCart(shoe: Shoe) {
+        if shoppingCartItems.keys.contains(shoe) {
+            shoppingCartItems[shoe]!  += 1
+        } else {
+            shoppingCartItems[shoe] = 1
+        }
+    }
+    
+    func getCartItems() -> [Shoe: Int] {
+        return shoppingCartItems
+    }
+    
+    func changeItemQuantity(shoe: Shoe, quantity: Int) {
+        if quantity <= 0 {
+            shoppingCartItems[shoe] = nil
+        } else {
+            shoppingCartItems[shoe] = quantity
+        }
+    }
     
     func getCategories() -> [Category] {
         return categories
